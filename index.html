@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>Persist ventures</title>
+  </head>
+  <body>
+    <div class="intro h-screen flex flex-col items-center justify-center bg-black">
+      <!-- Video for larger screens -->
+      <video
+        src="eyes_2.mp4"
+        class="hidden md:block w-full max-w-5xl h-auto object-cover rounded-lg shadow-lg"
+        autoplay
+        muted
+        loop
+      ></video>
+      
+
+      <h1 class="text_scroll text-xl sm:text-2xl md:text-5xl lg:text-6xl font-bold text-center text-white mt-4">
+        Scroll To Explore
+      </h1>
+      
+      <img
+        class="text_2 absolute bottom-10 w-32 md:w-48 lg:w-64 opacity-0 transition-opacity duration-500"
+        src="persist-ventures-logo.png"
+        alt="Persist Ventures Logo"
+      />
+    </div>
+    
+    <section class="features py-16 bg-black text-center text-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-12 text-red-500">
+          Discover the Features
+        </h2>
+        <div class="feature-items flex flex-wrap justify-center gap-6">
+          <div class="feature-item bg-gray-800 shadow-lg p-6 rounded-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4 hover:scale-105 transition-transform">
+            <h3 class="text-2xl font-semibold mb-4 text-red-400">Feature One</h3>
+            <p class="text-base md:text-lg">
+              Explore the limitless possibilities of our innovative solutions tailored for your needs.
+            </p>
+          </div>
+          <div class="feature-item bg-gray-800 shadow-lg p-6 rounded-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4 hover:scale-105 transition-transform">
+            <h3 class="text-2xl font-semibold mb-4 text-red-400">Feature Two</h3>
+            <p class="text-base md:text-lg">
+              Experience performance and design like never before with our cutting-edge technology.
+            </p>
+          </div>
+          <div class="feature-item bg-gray-800 shadow-lg p-6 rounded-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4 hover:scale-105 transition-transform">
+            <h3 class="text-2xl font-semibold mb-4 text-red-400">Feature Three</h3>
+            <p class="text-base md:text-lg">
+              Seamlessly integrate into your workflow for unparalleled productivity and success.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="call-to-action py-16 bg-red-500 text-black text-center">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6">
+          Ready to Transform?
+        </h2>
+        <p class="text-lg md:text-xl lg:text-2xl mb-8">
+          Take the first step toward innovation with the Persist ventures
+        </p>
+        <button class="cta-button bg-black text-red-500 hover:text-red-400 px-8 py-4 text-lg md:text-xl lg:text-2xl rounded-lg shadow-lg transform hover:scale-110 transition-transform">
+
+          <a href="https://persistventures.com/" style="color: white; text-decoration: none;">Get Started</a>
+
+          
+        </button>
+      </div>
+    </section>
+    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
+      integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"
+      integrity="sha256-peenofh8a9TIqKdPKIeQE7mJvuwh+J0To7nslvpj1jI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"
+      integrity="sha256-31FC/OT6XpfjAhj9FuXjw5/wPXXawCAjJQ29E23/XPk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>

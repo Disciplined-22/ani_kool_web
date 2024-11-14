@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.intro {
+  height: 100vh;
+}
+
+.intro video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.intro h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* font-size: 70px; */
+  color: white;
+}
+
+
+.text_2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the image */
+  width: 300px; /* Set desired width */
+  opacity: 0; /* Start with image hidden */
+  transition: opacity 0.3s ease; /* Smooth transition for fade-in */
+}
+
+.text_scroll {
+
+  font-weight: bold;
+  color: white;
+  text-align: center; /* Center-align the text */
+  white-space: nowrap; /* Prevent the text from breaking onto multiple lines */
+  animation: blink 1s infinite; /* Add blinking effect */
+  line-height: 1; /* Adjust line height */
+  z-index: 2;
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transitions */
+  visibility: hidden; /* Start as hidden */
+}
+
+.text_scroll[style*="opacity: 1"] {
+  visibility: visible; /* Make visible only when opacity is 1 */
+}
+
+
+@keyframes blink {
+  50% {
+    opacity: 0.5; /* Create a blinking effect */
+  }
+}
+
+
+.features {
+  padding: 5rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 3vw;
+  margin-bottom: 2rem;
+}
+
+.feature-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.feature-item {
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 30%;
+  min-width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: scale(1.05);
+}
+
+.feature-item h3 {
+  font-size: 2vw;
+  margin-bottom: 1rem;
+}
+
+.feature-item p {
+  font-size: 1.2vw;
+  line-height: 1.5;
+}
+
+/* Call-to-Action Section */
+.call-to-action {
+  padding: 5rem 1rem;
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+}
+
+.call-to-action h2 {
+  font-size: 3vw;
+  margin-bottom: 1rem;
+}
+
+.call-to-action p {
+  font-size: 1.5vw;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2vw;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ff4c4c;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .features h2 {
+    font-size: 5vw;
+  }
+
+  .feature-item {
+    width: 45%; /* Two items per row on tablets */
+    min-width: auto;
+  }
+
+  .feature-item h3 {
+    font-size: 4vw;
+  }
+
+  .feature-item p {
+    font-size: 3vw;
+  }
+
+  .call-to-action h2 {
+    font-size: 5vw;
+  }
+
+  .call-to-action p {
+    font-size: 4vw;
+  }
+
+  .cta-button {
+    font-size: 3.5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .features h2 {
+    font-size: 6vw;
+  }
+
+  .feature-item {
+    width: 100%; /* Stacks items vertically on smaller devices */
+    padding: 1.5rem;
+  }
+
+  .feature-item h3 {
+    font-size: 5vw;
+  }
+
+  .feature-item p {
+    font-size: 4vw;
+  }
+
+  .call-to-action h2 {
+    font-size: 6vw;
+  }
+
+  .call-to-action p {
+    font-size: 4.5vw;
+  }
+
+  .cta-button {
+    font-size: 4vw;
+    padding: 1rem 1.5rem;
+  }
+}
